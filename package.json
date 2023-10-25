@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/MiguelABFlores/vet-services-website/issues"
   },
-  "homepage": "https://github.com/MiguelABFlores/vet-services-website#readme"
+  "homepage": "https://github.com/MiguelABFlores/vet-services-website#readme",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
 }

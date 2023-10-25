@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;');
+
+/*-----body default-----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #0f4172;
+}
+
+/*-----navbar style-----*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #0f4172;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header a{
+    font-size: 18px;
+    color: #b1dce2;
+    text-decoration: none;
+    font-weight: 750;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: #d1707d;
+}
+/*-----menu-icon style-----*/
+#menu-icon{
+    font-size: 1.9rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+/*-----Main/home page-----*/
+.main {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    overflow-x: hidden;
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+/*-----left-----*/
+.main h1 {
+    color: #ecffff;
+    font-size: 65px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.home-content p{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color: #ecffff;
+    font-weight: 750;
+    margin: 20px 0 40px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+
+/*-----right-----*/
+.main .home-image{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    align-content:center;
+}
+
+
+.home-image img{
+    position: relative;
+    border-radius: 50%;
+}
+
+
+
+/*-----contact button-----*/
+.home-content .btn-box{
+    width: 345px;
+    height: 50px;
+    background: transparent;
+}
+
+.btn-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #0f4172;
+    border: 2px solid #ecffff;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #b1dce2;
+    text-decoration: none;
+    font-weight: 650;
+    letter-spacing: 0.5px;
+}
+
+.btn-box a:hover{
+    background: #d1707d;
+    color: #0f4172;
+    transition: .3s;
+}
+
+
+
+/*-----social-media buttons-----*/
+.home-social{
+    position: absolute;
+    bottom: 200px;
+    width: 170px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    text-decoration: none;
+    border: 2px solid #ecffff;
+    border-radius: 50%;
+    font-size: 32px;
+    color:#b1dce2;
+}
+
+.home-content a:hover{
+    background: #d1707d;
+    color: #0f4172;
+    transition: .3s;
+}

@@ -4,7 +4,17 @@ const path = require('path');
 module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack Output",
-    }),
+      hash: true,
+      title: 'Servicios Veterinarios Eläine',
+      header: 'Veterinaria',
+      metaDesc: 'Servicios Veterinarios a Docimicilio',
+      template: './src/index.html',
+      filename: 'index.html',
+      inject: 'body'
+    })
   ],
+  mode: 'release',
+  output: {
+    clean: true
+  }
 };

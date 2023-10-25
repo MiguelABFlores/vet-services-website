@@ -1,13 +1,10 @@
 {
   "name": "vet-services-website",
   "version": "1.0.0",
-  "description": "veterinary project",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "",
+  "main": "project.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

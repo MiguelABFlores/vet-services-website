@@ -1,5 +1,8 @@
 import '../css/style.css';
+import sveLogo from '../public/assets/SVE-logo.ico';
+import homeImage from '../public/assets/img-home-page.jpg';
 
-function revealMessage() {
-    document.getElementById("hiddenMessage").style.display = 'block';
-}
+var homeLogo = document.getElementById('logo');
+var homeImg = document.getElementById('homeImg');
+homeLogo.src = sveLogo;
+homeImg.src = homeImage;

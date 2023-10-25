@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <html>
-    <head>
-      <script src="js/project.js"></script>
-      <meta charset="utf-8" />
-      <title>Servicios Veterinarios Eläine</title>
-      <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-      <!--Button that redirects to another URL-->
-      <a href="https://www.instagram.com/svelain/" target="_blank"
-        >Instagram
-      </a>
-      <div class="cursor"></div>
-      <section class="main">
+  <head>
+    <script src="js/project.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios Veterinarios Eläine</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!--box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Navbar Section-->
+    <header class="header">
+      <a href="#" class="logo"><img id="logo" alt="logo" height="135" /></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">Quienes somos</a>
+        <a href="#Servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <!--Home/landing Section-->
+    <section class="main">
+      <div class="home-content">
         <h1>Servicios Veterinarios Eläine</h1>
-      </section>
-      <script type="text/javascript">
-        const cursor = document.querySelector(".cursor");
-        var timeout;
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+          voluptates unde. Facere illum recusandae perferendis dignissimos
+          omnis? Cupiditate iure ad ratione suscipit necessitatibus, officia
+          facilis? Magni molestias quos quo dolore?
+        </p>
 
-        // cursor movement
-        document.addEventListener("mousemove", (e) => {
-          let x = e.pageX;
-          let y = e.pageY;
-          cursor.style.top = y + "px";
-          cursor.style.left = x + "px";
-          cursor.style.display = "block";
+        <div class="btn-box">
+          <a href="#contacto">Contactanos!</a>
+        </div>
 
-          // stop animation
-          function mouseStopped() {
-            cursor.style.display = "none";
-          }
+        <div class="home-social">
+          <a href="https://www.instagram.com/svelain/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="whatsapp://send?phone=3317654147"
+            ><i class="bx bxl-whatsapp"></i
+          ></a>
+        </div>
+      </div>
 
-          // hide animation
-          clearTimeout(timeout);
-          timeout = setTimeout(mouseStopped, 1000);
-        });
+      <div class="homeImg">
+        <img id="homeImg" alt="animales domesticos" />
+      </div>
+    </section>
 
-        // stop animation off the screen
-        document.addEventListener("mouseout", () => {
-          cursor.style.display = "none";
-        });
-      </script>
-    </body>
-  </html>
+    <footer>
+      <!--Button that redirects to another URL-->
+      <a href="https://www.instagram.com/svelain/" target="_blank"></a>
+    </footer>
+  </body>
 </html>

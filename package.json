@@ -1,0 +1,22 @@
+{
+  "name": "vet-services-website",
+  "version": "1.0.0",
+  "description": "veterinary project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiguelABFlores/vet-services-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiguelABFlores/vet-services-website/issues"
+  },
+  "homepage": "https://github.com/MiguelABFlores/vet-services-website#readme"
+}

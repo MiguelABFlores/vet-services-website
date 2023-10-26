@@ -77,6 +77,10 @@ jobs:
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS_DEV }}"
 
+      - name: Debug GCP Credentials
+        run: |
+          echo $GOOGLE_APPLICATION_CREDENTIALS_JSON
+
       - name: Build and Push Docker commit dev version
         run: |-
           docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}" ./

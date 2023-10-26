@@ -2,7 +2,7 @@
 
 ### URL of development version
 
-[Servicios Veterinarios Eläine](https://svelaine-cloudrun-dev-lbcqooyyqa-wl.a.run.app)
+[Servicios Veterinarios Eläine](https://svelaine-cloudrun-dev-lbcqooyyqa-wl.a.run.app){:target="\_blank"}
 
 To bundle for development
 

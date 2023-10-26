@@ -13,10 +13,24 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
+      - name: GCP Login Credentials
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo Logging into GCP...
+          echo Status of authorization.
+
+      - name: Tests
+        run: |
+          echo Here we will run some tests,
+          echo Results of the tests.
+
+      - name: Building Docker Image
+        run: |
+          echo Building Docker Image with version tag...
+
+      - name: Push Docker Image to Artifact Registry
+        run: |
+          echo Pushing Docker Image to Artifact Registry with tags: commit and latest
+
+      - name: Deploy applicaton to GCP Cloud Run
+        run: |
+          echo Deploying to Cloud Run

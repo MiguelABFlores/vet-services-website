@@ -1,36 +1,59 @@
 name: CI
 
 on:
-  push:
-    branches: ["development"]
   pull_request:
-    branches: ["development"]
+    branches:
+      - development
+  push:
+    branches:
+      - development
   workflow_dispatch:
 
 jobs:
-  build:
+  login:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
       - name: GCP Login Credentials
         run: |
           echo Logging into GCP...
           echo Status of authorization.
 
+  tests:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    needs: login
+    steps:
       - name: Tests
         run: |
           echo Here we will run some tests,
           echo Results of the tests.
 
+  build:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
       - name: Building Docker Image
         run: |
           echo Building Docker Image with version tag...
 
+  push:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Push Docker Image to Artifact Registry
         run: |
           echo Pushing Docker Image to Artifact Registry with tags: commit and latest
 
-      - name: Deploy applicaton to GCP Cloud Run
+  deploy:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    needs: push
+    steps:
+      - name: Deploy application to GCP Cloud Run
         run: |
           echo Deploying to Cloud Run

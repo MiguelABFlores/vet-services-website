@@ -49,7 +49,7 @@ on:
 env:
   PROJECT_ID: servicios-veterinarios-elaine
   GAR_LOCATION: us-west2
-  SERVICE: svelaine
+  SERVICE: svelaine-docker-artifacts
   REGION: us-west2
   PROJECT_IMAGE: svelaine
 
@@ -79,7 +79,7 @@ jobs:
 
       - name: Debug GCP Credentials
         run: |
-          echo '${{ secrets.GCP_CREDENTIALS_DEV }}'
+          echo "${{ secrets.GCP_CREDENTIALS_DEV }}"
 
       - name: Build and Push Docker commit dev version
         run: |-

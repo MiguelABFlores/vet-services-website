@@ -77,28 +77,43 @@ jobs:
         with:
           credentials_json: "${{ secrets.GCP_CREDENTIALS_DEV }}"
 
-      - name: Debug GCP Credentials
-        run: |
-          echo "$GCP_CREDENTIALS_DEV"
+      - name: Set up Cloud SDK
+        uses: "google-github-actions/setup-gcloud@v1"
 
-      - name: Build and Push Docker commit dev version
+      - name: Build Docker Image
+        run: |
+          docker build -t "${{ env.PROJECT_IMAGE }}:latest" .
+
+      - name: Configure Docker Client of GCloud
         run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}" ./
+          gcloud auth configure-docker --quiet
+          gcloud auth configure-docker us-west2-docker.pkg.dev --quiet
+
+      - name: Push Docker Image to Artifact Registry
+        run: |-
+          docker tag "${{ env.PROJECT_IMAGE }}:latest" "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}"
+          docker tag "${{ env.PROJECT_IMAGE }}:latest" "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev"
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}"
-      - name: Build and Push Container latest dev version
-        run: |-
-          docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev" ./
           docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev"
 
-      # END - Docker auth and build
-      - name: Deploy to Cloud Run
-        id: deploy
-        uses: google-github-actions/deploy-cloudrun@v0
-        with:
-          service: ${{ env.SERVICE }}
-          region: ${{ env.REGION }}
-          image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev
+      # - name: Build Docker
+      #   run: |-
+      #     docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}" ./
+      #     docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:${{ env.COMMIT_SHORT_SHA }}"
+      # - name: Build and Push Container latest dev version
+      #   run: |-
+      #     docker build -t "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev" ./
+      #     docker push "${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev"
 
-      # Cloud Run URL Output
-      - name: Show Output
-        run: echo ${{ steps.deploy.outputs.url }}
+      # # END - Docker auth and build
+      # - name: Deploy to Cloud Run
+      #   id: deploy
+      #   uses: google-github-actions/deploy-cloudrun@v0
+      #   with:
+      #     service: ${{ env.SERVICE }}
+      #     region: ${{ env.REGION }}
+      #     image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/development/${{env.PROJECT_IMAGE}}:latest-dev
+
+      # # Cloud Run URL Output
+      # - name: Show Output
+      #   run: echo ${{ steps.deploy.outputs.url }}

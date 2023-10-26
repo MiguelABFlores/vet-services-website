@@ -78,7 +78,7 @@ body {
 .home-content p{
     height: 100%;
     width: 100%;
-    font-size: 16px;
+    font-size: 20px;
     color: #ecffff;
     font-weight: 750;
     margin: 20px 0 40px;
@@ -107,7 +107,7 @@ body {
 /*-----contact button-----*/
 .home-content .btn-box{
     width: 345px;
-    height: 50px;
+    height: 55px;
     background: transparent;
 }
 
@@ -119,7 +119,7 @@ body {
     height: 100%;
     background: #0f4172;
     border: 2px solid #ecffff;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 19px;
     color: #b1dce2;
     text-decoration: none;
@@ -139,10 +139,9 @@ body {
 .home-social{
     position: absolute;
     bottom: 200px;
-    width: 170px;
-
+    width: 200px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .home-social a{
@@ -150,13 +149,13 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     background: transparent;
     text-decoration: none;
-    border: 2px solid #ecffff;
+    border: 3px solid #ecffff;
     border-radius: 50%;
-    font-size: 32px;
+    font-size: 52px;
     color:#b1dce2;
 }
 
@@ -164,4 +163,44 @@ body {
     background: #d1707d;
     color: #0f4172;
     transition: .3s;
+}
+
+
+
+/*-----About us section-----*/
+.about{
+    background: #b1dce2;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.about-content{
+    padding-top: 7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    overflow-x: hidden;
+}
+
+.about-content h2{
+    color: #d1707d;
+    font-size: 55px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.about-content p{
+    font-size: 25px;
+    color: #0f4172;
+    font-weight: 600;
+    margin: 20px 0 40px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.about-img img{
+    position: relative;
+    border-radius: 15%;
 }

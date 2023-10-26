@@ -79,7 +79,7 @@ jobs:
 
       - name: Debug GCP Credentials
         run: |
-          echo ${{ secrets.GCP_CREDENTIALS_DEV }}
+          echo '${{ secrets.GCP_CREDENTIALS_DEV }}'
 
       - name: Build and Push Docker commit dev version
         run: |-

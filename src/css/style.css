@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    box-shadow: 0 2px 4px 0 #b1dce2;
+    box-shadow: 0 2px 4px 0 black;
 }
 
 .header a{
@@ -193,4 +193,106 @@ body {
 .about-img img{
     position: relative;
     border-radius: 15%;
+}
+
+
+
+
+/*-----Services section-----*/
+.services {
+    background-color: #0f4172;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.services-title {
+    color: #d1707d;
+    font-size: 55px;
+    padding: 30px 0;
+}
+
+.services-subtitle {
+    font-size: 26px;
+    color: #819db9;
+}
+
+.services-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.services-content {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Styles for individual service items */
+.services-items {
+    flex: 1;
+    background-color: #0f4172;
+    border: 2px solid #b3d9d4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    padding-top: 40px;
+}
+
+.services-items:hover {
+    box-shadow: 0 8px 100px 0 #d1707d;
+}
+
+.service-title {
+    color: #d1707d;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.services-items li {
+    list-style: none;
+    font-size: 35px;
+    margin: 10px 0;
+    color: #b3d9d4;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.services-padding{
+    padding-top: 100px;
+}
+
+.vaccine-items{
+    padding-top: 80px;
+}
+/*-----packages-----*/
+.packages .service-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.packages .packages-item {
+    text-align: justify;
+    text-align-last: center;
+    margin-top: 10px;
+    color: #d1707d;
+    margin-left: 50px;
+}
+
+.packages li{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.price {
+    margin-left: 40px; /* Adjust the margin-right value as needed */
+    color: #d1707d;
 }

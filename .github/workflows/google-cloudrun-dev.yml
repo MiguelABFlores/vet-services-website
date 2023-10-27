@@ -5,12 +5,12 @@ on:
     branches: ["development"]
 
 env:
-  PROJECT_ID: servicios-veterinarios-elaine
+  PROJECT_ID: servicios-veterinarios-elain
   GAR_LOCATION: us-west2
-  ARTIFACT_DOCKER_REPOSITORY: svelaine-docker-repository
-  CLOUD_RUN_SERVICE: svelaine-cloudrun-dev
+  ARTIFACT_DOCKER_REPOSITORY: svelain-docker-repository
+  CLOUD_RUN_SERVICE: svelain-cloudrun-dev
   REGION: us-west2
-  PROJECT_IMAGE: svelaine
+  PROJECT_IMAGE: svelain
 
 jobs:
   build-push:

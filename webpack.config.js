@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'Servicios Veterinarios Eläine',
+      title: 'Servicios Veterinarios Eläin',
       header: 'Veterinaria',
       metaDesc: 'Servicios Veterinarios a Docimicilio',
       template: './src/index.html',

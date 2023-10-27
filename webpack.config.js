@@ -16,10 +16,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-      test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
-      use: {
-        loader: 'url-loader',
-      },
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        use: {
+          loader: 'url-loader',
+        },
       },
     ],
   },
@@ -28,14 +28,19 @@ module.exports = {
       hash: true,
       title: 'Servicios Veterinarios Eläin',
       header: 'Veterinaria',
-      metaDesc: 'Servicios Veterinarios a Docimicilio',
+      metaDesc: 'Servicios Veterinarios a Domicilio',
       template: './src/index.html',
       filename: 'index.html',
       inject: 'body'
     })
   ],
-  mode: 'release',
-  output: {
-    clean: true
+  mode: 'production',
+  devtool: 'source-map',
+  optimization: {
+    minimize: true,
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'deploy'),
+    port: 9000,
   }
 };

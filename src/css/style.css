@@ -304,33 +304,33 @@ body {
     justify-content: center;
     width: 100%;
     height: 60vh;
-  }
-  
-  .contact-content {
+}
+
+.contact-content {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .contact-info {
+}
+
+.contact-info {
     flex: 1;
     text-align: center;
-  }
-  
-  .contact-info h2 {
+}
+
+.contact-info h2 {
     padding-bottom: 20px;
     font-size: 55px;
     color: #d1707d; /* Cambia el color del título a tu preferencia */
-  }
-  
-  .contact-info p {
+}
+
+.contact-info p {
     padding-bottom: 20px;
     font-size: 38px;
     color: #0f4172; /* Cambia el color del párrafo a tu preferencia */
-  }
-  
-  .contact-info a {
+}
+
+.contact-info a {
     justify-content: center;
     align-items:center;
     width: 80px;
@@ -339,42 +339,41 @@ body {
     text-decoration: none;
     font-size: 50px;
     color:#0f4172;
-  }
-  
-  .contact-image {
+}
+
+.contact-image {
     flex: 1;
     text-align: right;
-  }
-  
-  .contact-image img {
+}
+
+.contact-image img {
     max-width: 100%;
     height: auto;
 
-  }
+}
 
 /*-----footer section-----*/
-  .footer {
+.footer {
     background-color: #0f4172; /* Cambia el color de fondo a tu preferencia */
     color: #b3d9d4; /* Cambia el color del texto a tu preferencia */
     padding: 10px 0;
     text-align: center;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-  }
-  
-  .footer-logo img {
+}
+
+.footer-logo img {
     max-width: 100px; /* Ajusta el ancho del logotipo según tus necesidades */
     height: auto;
-  }
-  
-  .footer-text p {
+}
+
+.footer-text p {
     font-size: 16px;
-  }
-  
-  
+}
+

@@ -167,7 +167,7 @@ body {
 }
 
 .about-content{
-    padding-top: 7%;
+    padding-top: 3%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
@@ -202,10 +202,9 @@ body {
 .services {
     background-color: #0f4172;
     padding: 20px;
-    border-radius: 5px;
     text-align: center;
     width: 100%;
-    height: 80vh;
+    height: 200vh;
 }
 
 .services-title {
@@ -220,6 +219,7 @@ body {
 }
 
 .services-img {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,3 +296,85 @@ body {
     margin-left: 40px; /* Adjust the margin-right value as needed */
     color: #d1707d;
 }
+
+/*-----contact section-----*/
+.contact {
+    background-color: #b3d9d4; /* Cambia el color de fondo a tu preferencia */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+}
+
+.contact-content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-info h2 {
+    padding-bottom: 20px;
+    font-size: 55px;
+    color: #d1707d; /* Cambia el color del título a tu preferencia */
+}
+
+.contact-info p {
+    padding-bottom: 20px;
+    font-size: 38px;
+    color: #0f4172; /* Cambia el color del párrafo a tu preferencia */
+}
+
+.contact-info a {
+    justify-content: center;
+    align-items:center;
+    width: 80px;
+    height: 80px;
+    background: transparent;
+    text-decoration: none;
+    font-size: 50px;
+    color:#0f4172;
+}
+
+.contact-image {
+    flex: 1;
+    text-align: right;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/*-----footer section-----*/
+.footer {
+    background-color: #0f4172; /* Cambia el color de fondo a tu preferencia */
+    color: #b3d9d4; /* Cambia el color del texto a tu preferencia */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    max-width: 100px; /* Ajusta el ancho del logotipo según tus necesidades */
+    height: auto;
+}
+
+.footer-text p {
+    font-size: 16px;
+}
+

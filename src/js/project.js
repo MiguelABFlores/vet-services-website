@@ -18,5 +18,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     aboutImg.src = aboutImage;
     servicesImg.src = servicesImage;
     contactImg.src = contactImage;
-    footerImg.src = footerImage
+    footerImg.src = footerImage;
 });

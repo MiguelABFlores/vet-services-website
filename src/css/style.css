@@ -212,10 +212,11 @@ body {
     text-align: center;
     width: 100%;
     height: 210vh;
-
 }
+
 .services-padding{
     margin-top: 6%;
+    margin-bottom: 0;
 }
 
 .services-title {
@@ -234,7 +235,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .services-content {
@@ -384,3 +384,8 @@ body {
     font-size: 16px;
 }
 
+@media (min-width: 993px){
+    .services{
+        height: 230vh;
+    }
+}

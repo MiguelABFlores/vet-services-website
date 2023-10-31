@@ -299,13 +299,13 @@ body {
 }
 
 .price {
-    margin-left: 40px; /* Adjust the margin-right value as needed */
+    margin-left: 40px;
     color: #d1707d;
 }
 
 /*-----contact section-----*/
 .contact {
-    background-color: #b3d9d4; /* Cambia el color de fondo a tu preferencia */
+    background-color: #b3d9d4; 
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -328,13 +328,13 @@ body {
 .contact-info h2 {
     padding-bottom: 20px;
     font-size: 55px;
-    color: #d1707d; /* Cambia el color del título a tu preferencia */
+    color: #d1707d;
 }
 
 .contact-info p {
     padding-bottom: 20px;
     font-size: 38px;
-    color: #0f4172; /* Cambia el color del párrafo a tu preferencia */
+    color: #0f4172;
 }
 
 .contact-info a {
@@ -361,8 +361,8 @@ body {
 
 /*-----footer section-----*/
 .footer {
-    background-color: #0f4172; /* Cambia el color de fondo a tu preferencia */
-    color: #b3d9d4; /* Cambia el color del texto a tu preferencia */
+    background-color: #0f4172; 
+    color: #b3d9d4; 
     padding: 10px 0;
     text-align: center;
 }
@@ -376,7 +376,7 @@ body {
 }
 
 .footer-logo img {
-    max-width: 100px; /* Ajusta el ancho del logotipo según tus necesidades */
+    max-width: 100px; 
     height: auto;
 }
 

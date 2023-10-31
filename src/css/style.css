@@ -6,6 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    border: none;
+    outline: none;
 }
 
 html{
@@ -23,7 +25,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 10px 10%;
     background: #0f4172;
     display: flex;
     justify-content: space-between;
@@ -33,7 +35,7 @@ body {
 }
 
 .header a{
-    font-size: 18px;
+    font-size: 25px;
     color: #b1dce2;
     text-decoration: none;
     font-weight: 750;
@@ -165,17 +167,18 @@ body {
 .about{
     background: #b1dce2;
     width: 100%;
-    height: 50vh;
+    height: 62vh;
     align-items: center;
     padding: 0 15%;
 }
 
 .about-content{
-    padding-top: 3%;
+    padding-top: 12%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1px;
     overflow-x: hidden;
+
 }
 
 .about-content h2{
@@ -208,7 +211,12 @@ body {
     padding: 20px;
     text-align: center;
     width: 100%;
-    height: 200vh;
+    height: 210vh;
+}
+
+.services-padding{
+    margin-top: 6%;
+    margin-bottom: 0;
 }
 
 .services-title {
@@ -227,7 +235,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .services-content {
@@ -270,13 +277,8 @@ body {
     text-align: justify;
 }
 
-.services-padding{
-    padding-top: 100px;
-}
 
-.vaccine-items{
-    padding-top: 80px;
-}
+
 /*-----packages-----*/
 .packages .service-title {
     font-weight: bold;
@@ -297,13 +299,13 @@ body {
 }
 
 .price {
-    margin-left: 40px; /* Adjust the margin-right value as needed */
+    margin-left: 40px;
     color: #d1707d;
 }
 
 /*-----contact section-----*/
 .contact {
-    background-color: #b3d9d4; /* Cambia el color de fondo a tu preferencia */
+    background-color: #b3d9d4; 
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -326,13 +328,13 @@ body {
 .contact-info h2 {
     padding-bottom: 20px;
     font-size: 55px;
-    color: #d1707d; /* Cambia el color del título a tu preferencia */
+    color: #d1707d;
 }
 
 .contact-info p {
     padding-bottom: 20px;
     font-size: 38px;
-    color: #0f4172; /* Cambia el color del párrafo a tu preferencia */
+    color: #0f4172;
 }
 
 .contact-info a {
@@ -359,8 +361,8 @@ body {
 
 /*-----footer section-----*/
 .footer {
-    background-color: #0f4172; /* Cambia el color de fondo a tu preferencia */
-    color: #b3d9d4; /* Cambia el color del texto a tu preferencia */
+    background-color: #0f4172; 
+    color: #b3d9d4; 
     padding: 10px 0;
     text-align: center;
 }
@@ -374,7 +376,7 @@ body {
 }
 
 .footer-logo img {
-    max-width: 100px; /* Ajusta el ancho del logotipo según tus necesidades */
+    max-width: 100px; 
     height: auto;
 }
 
@@ -382,3 +384,8 @@ body {
     font-size: 16px;
 }
 
+@media (min-width: 993px){
+    .services{
+        height: 230vh;
+    }
+}

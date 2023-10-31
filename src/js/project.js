@@ -20,3 +20,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
     contactImg.src = contactImage;
     footerImg.src = footerImage;
 });
+
+
+const packageTitles = document.querySelectorAll('.service-title');
+
+packageTitles.forEach((title) => {
+    title.addEventListener('click', () => {
+        title.classList.toggle('active');
+    });
+});

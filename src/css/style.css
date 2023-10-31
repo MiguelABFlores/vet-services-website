@@ -211,7 +211,7 @@ body {
     padding: 20px;
     text-align: center;
     width: 100%;
-    height: 210vh;
+    height: 100%;
 }
 
 .services-padding{
@@ -277,31 +277,45 @@ body {
     text-align: justify;
 }
 
-
-
 /*-----packages-----*/
-.packages .service-title {
-    font-weight: bold;
-    margin-top: 20px;
+
+.package-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
-.packages .packages-item {
-    text-align: justify;
-    text-align-last: center;
-    margin-top: 10px;
+.package-title:hover + .package-content {
+    max-height: 1000px; 
+}
+
+.package-options .price {
     color: #d1707d;
-    margin-left: 50px;
+    font-weight: bold;
 }
 
-.packages li{
-    margin-left: 50px;
-    margin-right: 50px;
+.package-options .services-subtitle{
+    font-size: 26px;
+    color: #819db9;
 }
+
+.package-title {
+    color: #d1707d;
+    font-size: 45px;
+    padding: 15px 0;
+}
+
+.package-options{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 
 .price {
     margin-left: 40px;
     color: #d1707d;
 }
+
 
 /*-----contact section-----*/
 .contact {

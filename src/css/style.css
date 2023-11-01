@@ -273,7 +273,7 @@ body {
     color: #b3d9d4;
     display: flex;
     justify-content: space-between;
-    text-align: justify;
+    text-align: left;
 }
 
 /*-----packages-----*/
@@ -309,11 +309,19 @@ body {
     padding-right: 10%;
 }
 
+.package-options .package-title{
+    font-size: 26px;
+    color: #819db9;
+}
 
 .price {
-    margin-left: 40px;
+    margin-left: 10px;
     color: #d1707d;
+    width: 80px; /* Ancho fijo para alinear números */
+    text-align: left; /* Alinea los números a la derecha */
 }
+
+
 
 
 /*-----contact section-----*/

@@ -311,6 +311,7 @@ body {
     font-size: 40px;
     transition: 0.5s;
     border-radius: 10px;
+    
   }
 
   label:hover {
@@ -331,17 +332,17 @@ body {
     max-height: 600px; /* Ajusta la altura máxima según tus necesidades */
     padding-left: 80px;
     padding-right: 80px; /* Añadir espacio a los lados cuando se muestra el contenido */
-    max-width: 800px;
+
 }
   
   .package-options {
     list-style-type: none;
     padding: 0;
     margin: 0;
-
   }
   
   .package-options li {
+    font-size: 30px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;

@@ -278,49 +278,79 @@ body {
 
 /*-----packages-----*/
 
-.package-content {
+/* Estilo para el contenido */
+
+/* Estilo para el precio */
+.price {
+  margin-left: 10px;
+  color: #d1707d;
+  text-align: left;
+  width: 80px;
+}
+
+.accordion {
+    margin: 0 auto;
+  }
+  
+  .item {
+    margin: 10px 0;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  
+  label {
+    display: block;
+    background: #b3d9d4;
+    color: #0f4172;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 40px;
+    transition: 0.5s;
+    border-radius: 10px;
+  }
+
+  label:hover {
+    background: #d1707d;
+  }
+  
+  .content {
+    padding-left: 80px;
+    padding-right: 80px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition:  0.3s ease-in-out;
+    text-align: center; /* Centrar el contenido */
+    padding: 10px; /* Agregar espacio a los lados */
+  }
+  
+  input[type="checkbox"]:checked + label + .content {
+    max-height: 600px; /* Ajusta la altura máxima según tus necesidades */
+    padding-left: 80px;
+    padding-right: 80px; /* Añadir espacio a los lados cuando se muestra el contenido */
+    max-width: 800px;
 }
+  
+  .package-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-.package-title:hover + .package-content {
-    max-height: 1000px; 
-}
-
-.package-options .price {
-    color: #d1707d;
-    font-weight: bold;
-}
-
-.package-options .services-subtitle{
-    font-size: 26px;
+  }
+  
+  .package-options li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center; /* Alinear verticalmente los elementos */
+  }
+  
+.package-options .check{
     color: #819db9;
 }
-
-.package-title {
-    color: #d1707d;
-    font-size: 45px;
-    padding: 15px 0;
-}
-
-.package-options{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-.package-options .package-title{
-    font-size: 26px;
-    color: #819db9;
-}
-
-.price {
-    margin-left: 10px;
-    color: #d1707d;
-    width: 80px; /* Ancho fijo para alinear números */
-    text-align: left; /* Alinea los números a la derecha */
-}
-
 
 
 

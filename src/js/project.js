@@ -22,22 +22,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 
-
-const toggleButtons = document.querySelectorAll(".toggle-button");
-
-// Agrega un evento clic a cada botón
-toggleButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    // Encuentra el elemento .package-content más cercano al botón
-    const packageContent = button.closest(".package-option").querySelector(".package-content");
-    
-    // Alternar la visibilidad del contenido
-    if (packageContent.style.display === "none") {
-      packageContent.style.display = "block";
-      button.classList.add("active"); // Agrega una clase activa al botón
-    } else {
-      packageContent.style.display = "none";
-      button.classList.remove("active"); // Elimina la clase activa del botón
-    }
-  });
-});

@@ -210,13 +210,12 @@ body {
     background-color: #0f4172;
     padding: 20px;
     text-align: center;
-    width: 100%;
-    height: 210vh;
+
 }
 
 .services-padding{
     margin-top: 6%;
-    margin-bottom: 0;
+    
 }
 
 .services-title {
@@ -244,7 +243,7 @@ body {
     gap: 30px;
 }
 
-/* Styles for individual service items */
+/* Styles for each service box */
 .services-items {
     flex: 1;
     background-color: #0f4172;
@@ -274,34 +273,95 @@ body {
     color: #b3d9d4;
     display: flex;
     justify-content: space-between;
-    text-align: justify;
+    text-align: left;
 }
-
-
 
 /*-----packages-----*/
-.packages .service-title {
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.packages .packages-item {
-    text-align: justify;
-    text-align-last: center;
-    margin-top: 10px;
-    color: #d1707d;
-    margin-left: 50px;
-}
-
-.packages li{
-    margin-left: 50px;
-    margin-right: 50px;
-}
 
 .price {
-    margin-left: 40px;
+    margin-left: 10px;
     color: #d1707d;
+    text-align: left;
+    width: 80px;
 }
+
+  /* Estilos para los botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-primary{
+    background: #0f4172;
+    border: 2px solid #b3d9d4;
+    font-size: 40px;
+    color: #b3d9d4;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-primary:hover{
+    background: #d1707d;
+    transition: 0.4s;
+}
+
+.toggle-button {
+    margin: 10px;
+}
+
+/* Estilos para el contenido */
+.content-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #0f4172;
+    margin-bottom: 20px;
+}
+
+.content-container h4 {
+    color: #d1707d;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+
+#perroContent{
+    display: none;
+    transition: 0.4s;
+}
+
+
+#gatoContent{
+    display: none;
+    transition: 0.4s;
+}
+
+
+
+/* Estilos para los precios */
+.package-options .price {
+    color: #d1707d;
+    margin-left: 10px;
+}
+
+.package-options .check{
+    color: #819db9;
+}
+
+.package-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.package-options li {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
 
 /*-----contact section-----*/
 .contact {
@@ -386,6 +446,6 @@ body {
 
 @media (min-width: 993px){
     .services{
-        height: 230vh;
+        height: auto;
     }
 }

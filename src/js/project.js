@@ -20,3 +20,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
     contactImg.src = contactImage;
     footerImg.src = footerImage;
 });
+
+$(document).ready(function() {
+    // Configura el evento click para los botones
+    $('.toggle-button').click(function() {
+        var contentId = $(this).data('bs-target');
+        console.log(contentId)
+        if(contentId == "#perroContent"){
+          $(contentId).css("display", "block");
+          $("#gatoContent").css("display","none");
+          console.log("perro")
+        }
+
+        if(contentId == "#gatoContent"){
+          $(contentId).css("display", "block");
+          $("#perroContent").css("display","none");
+          console.log("gato")
+        }
+        
+    });
+});
+

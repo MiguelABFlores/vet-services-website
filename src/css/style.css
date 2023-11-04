@@ -278,81 +278,89 @@ body {
 
 /*-----packages-----*/
 
-/* Estilo para el contenido */
-
-/* Estilo para el precio */
 .price {
-  margin-left: 10px;
-  color: #d1707d;
-  text-align: left;
-  width: 80px;
+    margin-left: 10px;
+    color: #d1707d;
+    text-align: left;
+    width: 80px;
 }
 
-.accordion {
-    margin: 0 auto;
-  }
-  
-  .item {
-    margin: 10px 0;
-  }
-  
-  input[type="checkbox"] {
-    display: none;
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-  
-  label {
-    display: block;
-    background: #b3d9d4;
-    color: #0f4172;
-    padding: 10px 20px;
-    cursor: pointer;
+  /* Estilos para los botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-primary{
+    background: #0f4172;
+    border: 2px solid #b3d9d4;
     font-size: 40px;
-    transition: 0.5s;
+    color: #b3d9d4;
+    cursor: pointer;
     border-radius: 10px;
-    
-  }
-
-  label:hover {
-    background: #d1707d;
-  }
-  
-  .content {
-    padding-left: 80px;
-    padding-right: 80px;
-    max-height: 0;
-    overflow: hidden;
-    transition:  0.3s ease-in-out;
-    text-align: center; 
-    padding: 10px; 
-  }
-  
-  input[type="checkbox"]:checked + label + .content {
-    max-height: 600px; 
-    padding-left: 80px;
-    padding-right: 80px; 
-
 }
-  
-  .package-options {
+
+.btn-primary:hover{
+    background: #d1707d;
+    transition: 0.4s;
+}
+
+.toggle-button {
+    margin: 10px;
+}
+
+/* Estilos para el contenido */
+.content-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #0f4172;
+    margin-bottom: 20px;
+}
+
+.content-container h4 {
+    color: #d1707d;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+
+#perroContent{
+    display: none;
+    transition: 0.4s;
+}
+
+
+#gatoContent{
+    display: none;
+    transition: 0.4s;
+}
+
+
+
+/* Estilos para los precios */
+.package-options .price {
+    color: #d1707d;
+    margin-left: 10px;
+}
+
+.package-options .check{
+    color: #819db9;
+}
+
+.package-options {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
-  
-  .package-options li {
+}
+
+.package-options li {
     font-size: 30px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     align-items: center;
-  }
-  
-.package-options .check{
-    color: #819db9;
 }
-
 
 
 /*-----contact section-----*/

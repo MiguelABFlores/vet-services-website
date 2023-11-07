@@ -97,11 +97,12 @@ body {
     width: 100%;
     justify-content: center;
     align-content:center;
+    border-radius: 15%;
 }
 
 .home-image img{
     position: relative;
-    border-radius: 50%;
+    border-radius: 15%;
 }
 
 /*-----contact button-----*/

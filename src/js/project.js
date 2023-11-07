@@ -1,12 +1,12 @@
 import '../css/style.css';
 
 const imagePaths = {
-  logo: '../src/public/assets/SVE-logo.ico',
-  homeImg: '../src/public/assets/img-home-page.jpg',
-  aboutImg: '../src/public/assets/about-img.jpg',
-  servicesImg: '../src/public/assets/costo-distancia.jpeg',
-  contactImg: '../src/public/assets/contact-img.png',
-  footerImg: '../src/public/assets/footer-logo.ico',
+  logo: '../public/assets/SVE-logo.ico',
+  homeImg: '../public/assets/img-home-page.jpg',
+  aboutImg: '../public/assets/about-img.jpg',
+  servicesImg: '../public/assets/costo-distancia.jpeg',
+  contactImg: '../public/assets/contact-img.png',
+  footerImg: '../public/assets/footer-logo.ico',
 };
 
 class ImageLoader {

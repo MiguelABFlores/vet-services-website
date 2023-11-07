@@ -1,5 +1,6 @@
 import '../css/style.css';
-
+//lectura de imagenes para mostrar en la pagina.
+//class imageloader almacena las imagenes con su respectivo path.
 class ImageLoader {
   constructor() {
       this.imageElements = [
@@ -22,14 +23,14 @@ class ImageLoader {
   }
 }
 
-// Crear una instancia de ImageLoader y cargar imágenes cuando se carga el documento
+// Crear una instancia de ImageLoader y cargar imágenes cuando se carga el documento.
 document.addEventListener('DOMContentLoaded', function () {
   const imageLoader = new ImageLoader();
   imageLoader.loadImages();
 });
 
 
-
+//funcion para no mostrar mas de 1 de los botones paquetes (perro y gato)
 $(document).ready(function() {
     $('.toggle-button').click(function() {
         var contentId = $(this).data('bs-target');

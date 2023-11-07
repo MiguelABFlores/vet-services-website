@@ -1,25 +1,33 @@
 import '../css/style.css';
-//lectura de imagenes para mostrar en la pagina.
-//class imageloader almacena las imagenes con su respectivo path.
+
+const imagePaths = {
+  logo: '/src/public/assets/SVE-logo.ico',
+  homeImg: '/src/public/assets/img-home-page.jpg',
+  aboutImg: '/src/public/assets/about-img.jpg',
+  servicesImg: '/src/public/assets/costo-distancia.jpeg',
+  contactImg: '/src/public/assets/contact-img.png',
+  footerImg: '/src/public/assets/footer-logo.ico',
+};
+
 class ImageLoader {
   constructor() {
-      this.imageElements = [
-          { id: 'logo', src: '../src/public/assets/SVE-logo.ico' },
-          { id: 'homeImg', src: '../src/public/assets/img-home-page.jpg' },
-          { id: 'aboutImg', src: '../src/public/assets/about-img.jpg' },
-          { id: 'servicesImg', src: '../src/public/assets/costo-distancia.jpeg' },
-          { id: 'contactImg', src: '../src/public/assets/contact-img.png' },
-          { id: 'footerImg', src: '../src/public/assets/footer-logo.ico' }
-      ];
+    this.imageElements = [
+      { id: 'logo', src: imagePaths.logo },
+      { id: 'homeImg', src: imagePaths.homeImg },
+      { id: 'aboutImg', src: imagePaths.aboutImg },
+      { id: 'servicesImg', src: imagePaths.servicesImg },
+      { id: 'contactImg', src: imagePaths.contactImg },
+      { id: 'footerImg', src: imagePaths.footerImg },
+    ];
   }
 
   loadImages() {
-      this.imageElements.forEach((imageInfo) => {
-          const image = document.getElementById(imageInfo.id);
-          if (image) {
-              image.src = imageInfo.src;
-          }
-      });
+    this.imageElements.forEach((imageInfo) => {
+      const image = document.getElementById(imageInfo.id);
+      if (image) {
+        image.src = imageInfo.src;
+      }
+    });
   }
 }
 

@@ -1,61 +1,33 @@
 import '../css/style.css';
+//lectura de imagenes para mostrar en la pagina.
+//class imageloader almacena las imagenes con su respectivo path.
+class ImageLoader {
+  constructor() {
+      this.imageElements = [
+          { id: 'logo', src: '../src/public/assets/SVE-logo.ico' },
+          { id: 'homeImg', src: '../src/public/assets/img-home-page.jpg' },
+          { id: 'aboutImg', src: '../src/public/assets/about-img.jpg' },
+          { id: 'servicesImg', src: '../src/public/assets/costo-distancia.jpeg' },
+          { id: 'contactImg', src: '../src/public/assets/contact-img.png' },
+          { id: 'footerImg', src: '../src/public/assets/footer-logo.ico' }
+      ];
+  }
 
-const loadImage = (src) => {
-  return new Promise((resolve, reject) => {
-    const image = new Image();
-    image.onload = () => {
-      resolve(image);
-    };
-    image.onerror = () => {
-      reject(new Error(`Failed to load image: ${src}`));
-    };
-    image.src = src;
-  });
-};
-
-const loadImages = async () => {
-  const images = {};
-
-  const logoImage = await loadImage('../public/assets/SVE-logo.ico');
-  images.logo = logoImage;
-
-  const homeImage = await loadImage('../public/assets/img-home-page.jpg');
-  images.homeImg = homeImage;
-
-  const aboutImage = await loadImage('../public/assets/about-img.jpg');
-  images.aboutImg = aboutImage;
-
-  const servicesImage = await loadImage('../public/assets/costo-distancia.jpeg');
-  images.servicesImg = servicesImage;
-
-  const contactImage = await loadImage('../public/assets/contact-img.png');
-  images.contactImg = contactImage;
-
-  const footerImage = await loadImage('../public/assets/footer-logo.ico');
-  images.footerImg = footerImage;
-
-  return images;
-};
-
-const images = await loadImages();
-
-const imagePaths = {
-  logo: images.logo,
-  homeImg: images.homeImg,
-  aboutImg: images.aboutImg,
-  servicesImg: images.servicesImg,
-  contactImg: images.contactImg,
-  footerImg: images.footerImg,
-};
-
-function showImages() {
-  const images = document.querySelectorAll('img');
-  for (const image of images) {
-    image.src = imagePaths[image.id];
+  loadImages() {
+      this.imageElements.forEach((imageInfo) => {
+          const image = document.getElementById(imageInfo.id);
+          if (image) {
+              image.src = imageInfo.src;
+          }
+      });
   }
 }
 
-showImages();
+// Crear una instancia de ImageLoader y cargar imágenes cuando se carga el documento.
+document.addEventListener('DOMContentLoaded', function () {
+  const imageLoader = new ImageLoader();
+  imageLoader.loadImages();
+});
 
 
 //funcion para no mostrar mas de 1 de los botones paquetes (perro y gato)

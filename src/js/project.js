@@ -48,23 +48,14 @@ const imagePaths = {
   footerImg: images.footerImg,
 };
 
-const image = document.getElementById('logo');
-image.src = imagePaths.logo;
+function showImages() {
+  const images = document.querySelectorAll('img');
+  for (const image of images) {
+    image.src = imagePaths[image.id];
+  }
+}
 
-const image = document.getElementById('homeImg');
-image.src = imagePaths.homeImg;
-
-const image = document.getElementById('aboutImg');
-image.src = imagePaths.aboutImg;
-
-const image = document.getElementById('servicesImg');
-image.src = imagePaths.servicesImg;
-
-const image = document.getElementById('contactImg');
-image.src = imagePaths.contactImg;
-
-const image = document.getElementById('footerImg');
-image.src = imagePaths.footerImg;
+showImages();
 
 
 //funcion para no mostrar mas de 1 de los botones paquetes (perro y gato)

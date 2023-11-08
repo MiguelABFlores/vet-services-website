@@ -1,41 +1,70 @@
 import '../css/style.css';
 
-const imagePaths = {
-  logo: '../src/public/assets/SVE-logo.ico',
-  homeImg: '../src/public/assets/img-home-page.jpg',
-  aboutImg: '../src/public/assets/about-img.jpg',
-  servicesImg: '../src/public/assets/costo-distancia.jpeg',
-  contactImg: '../src/public/assets/contact-img.png',
-  footerImg: '../src/public/assets/footer-logo.ico',
+const loadImage = (src) => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => {
+      resolve(image);
+    };
+    image.onerror = () => {
+      reject(new Error(`Failed to load image: ${src}`));
+    };
+    image.src = src;
+  });
 };
 
-class ImageLoader {
-  constructor() {
-    this.imageElements = [
-      { id: 'logo', src: imagePaths.logo },
-      { id: 'homeImg', src: imagePaths.homeImg },
-      { id: 'aboutImg', src: imagePaths.aboutImg },
-      { id: 'servicesImg', src: imagePaths.servicesImg },
-      { id: 'contactImg', src: imagePaths.contactImg },
-      { id: 'footerImg', src: imagePaths.footerImg },
-    ];
-  }
+const loadImages = async () => {
+  const images = {};
 
-  loadImages() {
-    this.imageElements.forEach((imageInfo) => {
-      const image = document.getElementById(imageInfo.id);
-      if (image) {
-        image.src = imageInfo.src;
-      }
-    });
-  }
-}
+  const logoImage = await loadImage('../public/assets/SVE-logo.ico');
+  images.logo = logoImage;
 
-// Crear una instancia de ImageLoader y cargar imágenes cuando se carga el documento.
-document.addEventListener('DOMContentLoaded', function () {
-  const imageLoader = new ImageLoader();
-  imageLoader.loadImages();
-});
+  const homeImage = await loadImage('../public/assets/img-home-page.jpg');
+  images.homeImg = homeImage;
+
+  const aboutImage = await loadImage('../public/assets/about-img.jpg');
+  images.aboutImg = aboutImage;
+
+  const servicesImage = await loadImage('../public/assets/costo-distancia.jpeg');
+  images.servicesImg = servicesImage;
+
+  const contactImage = await loadImage('../public/assets/contact-img.png');
+  images.contactImg = contactImage;
+
+  const footerImage = await loadImage('../public/assets/footer-logo.ico');
+  images.footerImg = footerImage;
+
+  return images;
+};
+
+const images = await loadImages();
+
+const imagePaths = {
+  logo: images.logo,
+  homeImg: images.homeImg,
+  aboutImg: images.aboutImg,
+  servicesImg: images.servicesImg,
+  contactImg: images.contactImg,
+  footerImg: images.footerImg,
+};
+
+const image = document.getElementById('logo');
+image.src = imagePaths.logo;
+
+const image = document.getElementById('homeImg');
+image.src = imagePaths.homeImg;
+
+const image = document.getElementById('aboutImg');
+image.src = imagePaths.aboutImg;
+
+const image = document.getElementById('servicesImg');
+image.src = imagePaths.servicesImg;
+
+const image = document.getElementById('contactImg');
+image.src = imagePaths.contactImg;
+
+const image = document.getElementById('footerImg');
+image.src = imagePaths.footerImg;
 
 
 //funcion para no mostrar mas de 1 de los botones paquetes (perro y gato)

@@ -3,6 +3,8 @@ name: Build and Deploy to Cloud Run Development
 on:
   push:
     branches: ["development"]
+    paths-ignore:
+      - '**.md'
 
 env:
   PROJECT_ID: servicios-veterinarios-elain

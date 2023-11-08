@@ -33,6 +33,12 @@ We group labels by color, according to broad themes.
 ### Platform
 If the repository covers multiple parts, this is how we designate where the issue lives. (i.e. iOS and Android for cross-platform tablet app).
 
+### Priority
+We designate immediacy, the assignments that you designate as the most important in your workflow.
+
+### Effort
+Relative effort involved in the task at hand, fibonacci from 1 to 13.
+
 ### Problems
 Issues that make the product feel broken. High priority, especially if its present in production.
 

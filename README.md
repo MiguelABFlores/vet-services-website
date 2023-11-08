@@ -21,3 +21,8 @@ To run tests
 ```sh
 npm run test
 ```
+
+### Format and Validate
+We will be using different tools to format the code and verify its validity accross the lines:
+- [HTML Validator](https://validator.w3.org/)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)

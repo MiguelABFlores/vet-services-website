@@ -22,7 +22,7 @@ module.exports = {
           options: {
             limit: 10000,
             name: '[name].[ext]',
-            outputPath: '../src/public/assets/',
+            outputPath: '../public/assets/',
           },
         },
       },

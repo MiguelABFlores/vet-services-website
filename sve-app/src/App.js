@@ -4,9 +4,11 @@ import images from "./assets/images/images";
 
 function App() {
   return (
-    <div>
+    <div id="home">
       <header className="header">
-        <img src={images.logo} className="logo" alt="SVE-logo" />
+        <a href="#home">
+          <img src={images.logo} className="logo" alt="SVE-logo" />
+        </a>
 
         <nav className="navbar">
           <a href="#home">Home</a>

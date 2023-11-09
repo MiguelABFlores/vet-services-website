@@ -2,8 +2,9 @@
 
 ## URL of development Version
 
-[Development](https://svelain-cloudrun-dev-y7olqgb2fa-wl.a.run.app)
-[Release](https://svelain-cloudrun-release-y7olqgb2fa-wl.a.run.app)
+> ⚙️ [Development](https://svelain-cloudrun-dev-y7olqgb2fa-wl.a.run.app)
+
+> 🏎️ [Release](https://svelain-cloudrun-release-y7olqgb2fa-wl.a.run.app)
 
 To bundle for development
 

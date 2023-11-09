@@ -37,7 +37,7 @@
   height: 100px;
   object-fit: cover;
   display: flex;
-  margin-left: 140px;
+  margin-left: 210px;
   object-fit: cover;
 }
 
@@ -52,7 +52,7 @@
   text-decoration: none;
   color: #b1dce2;
   font-size: 23px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .navbar a:hover {
@@ -66,7 +66,7 @@
 }
 /*-----navbar style end-----*/
 /*-----home/landing style start-----*/
-.home-background{
+.home {
   background: #0f4172;
 }
 

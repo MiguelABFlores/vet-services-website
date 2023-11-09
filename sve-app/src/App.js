@@ -6,9 +6,7 @@ function App() {
   return (
     <div>
       <header className="header">
-        <a href="#">
-          <img src={images.logo} className="logo" alt="SVE-logo"/>
-        </a>
+        <img src={images.logo} className="logo" alt="SVE-logo" />
 
         <nav className="navbar">
           <a href="#home">Home</a>
@@ -17,8 +15,6 @@ function App() {
           <a href="#contact">Contacto</a>
         </nav>
       </header>
-
-
 
       <section className="home-background">
         <div>

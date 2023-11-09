@@ -1,8 +1,9 @@
-# vet-services-website
+# Servicios Veterinarios Eläin
 
-## URL of development version
+## URL of development Version
 
-[Servicios Veterinarios Eläine](https://svelain-cloudrun-dev-y7olqgb2fa-wl.a.run.app)
+[Development](https://svelain-cloudrun-dev-y7olqgb2fa-wl.a.run.app)
+[Release](https://svelain-cloudrun-release-y7olqgb2fa-wl.a.run.app)
 
 To bundle for development
 

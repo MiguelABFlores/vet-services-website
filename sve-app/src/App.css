@@ -8,7 +8,7 @@
   border: none;
   outline: none;
 }
-/*-----navbar style-----*/
+/*-----navbar style start-----*/
 .header {
   position: fixed;
   top: 0;
@@ -33,11 +33,12 @@
 }
 
 .logo {
-  width: 100px;
+  width: 130px;
   height: 100px;
   object-fit: cover;
   display: flex;
-  margin-left: 100px;
+  margin-left: 140px;
+  object-fit: cover;
 }
 
 .navbar {
@@ -50,10 +51,18 @@
 .navbar a {
   text-decoration: none;
   color: #b1dce2;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 500;
 }
 
 .navbar a:hover {
   color: #d1707d;
 }
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+}
+/*-----navbar style end-----*/
+

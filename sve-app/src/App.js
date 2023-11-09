@@ -7,7 +7,7 @@ function App() {
     <div>
       <header className="header">
         <a href="#">
-          <img src={images.logo} className="logo" />
+          <img src={images.logo} className="logo" alt="SVE-logo"/>
         </a>
 
         <nav className="navbar">

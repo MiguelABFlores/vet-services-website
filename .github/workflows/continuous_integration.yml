@@ -1,0 +1,20 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - development
+      - release
+    paths-ignore:
+      - '**.md'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tests
+        run: |
+          echo Here we will run some tests,
+          echo Results of the tests.

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../src/js/project.js"></script>    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios Veterinarios Eläin</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Navbar Section-->
+    <header class="header">
+      <a href="#" class="logo"><img id="logo" alt="logo" height="110" /></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">Quienes somos</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <!--Home/landing Section-->
+    <section class="main" id="home">
+      <div class="home-content">
+        <h1>Servicios Veterinarios Eläin</h1>
+        <p>
+          Servicios veterinarios a domicilio: Cuidamos de tus mascotas en tu
+          propio hogar, brindándoles la mejor atención sin que tú tengas que
+          moverte.
+        </p>
+
+        <div class="btn-box">
+          <a href="#contact">Contactanos!</a>
+        </div>
+
+        <div class="home-social">
+          <a href="https://www.instagram.com/svelain/" target="_blank"><i class="bx bxl-instagram"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=523317654147"><i class="bx bxl-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="home-image">
+        <img id="homeImg" alt="animales domesticos" />
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-content">
+        <div class="about-img">
+          <img id = "aboutImg" alt="animales domesticos" />
+        </div>
+
+        <div class="about-text">
+          <h2 class="title-about">Sobre nosotros</h2>
+          <p>
+            En Servicios Veterinarios Eläin entendemos que la comidad de tus
+            mascotas es una prioridad. Por eso, Ofrecemos servicios veterinarios
+            a domiciolio bajo cita previa.
+          </p>
+          <p>
+            Nuestro equipo de veterinarios altamente calificados está listo para
+            atender a sus mascotas en la comodidad de tu hogar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services-padding">
+        <h2 class="services-title">Precios</h2>
+        <h4 class="services-subtitle">*Mas costo a domicilio por zona*</h4>
+        <div class="services-img">
+          <img id="servicesImg" alt="costo-distancia">
+        </div>
+      
+        <div class="services-content">
+
+          <div class="services-items">
+              <h3 class="service-title">Servicios</h3>
+              <ul>
+                <li>Consulta <span class="price">$480</span></li>
+                <li>Ultrasonido Abdominal <span class="price">$600</span></li>
+                <li>Coproparasitoscopico <span class="price">$100</span></li>
+                <li>Biometria Hematica <span class="price">$330</span></li>
+                <li>Perfil Quimico <span class="price">$1,130</span></li>
+                <li>Examen de Orina <span class="price">$170</span></li>
+              </ul>
+          </div>
+      
+          <div class="services-items">
+              <h3 class="service-title">Vacunas</h3>
+              <ul>
+                <li>Puppy y Puppy DP <span class="price">$360</span></li>
+                <li>Multiple <span class="price">$350</span></li>
+                <li>Rabia <span class="price">$220</span></li>
+                <li>Bordetella <span class="price">$250</span></li>
+                <li>Triple FSelina <span class="price">$350</span></li>
+                <li>Leucemia <span class="price">$350</span></li>
+                <li>Snap Sida/Leucemia <span class="price">$570</span></li>
+              </ul>
+          </div>
+
+          <div class="services-items">
+            <h3 class="service-title">Paquetes</h3>
+        
+            <div class="buttons-container">
+              <button class="btn btn-primary toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#perroContent" aria-expanded="false" aria-controls="perroContent">Perro</button>
+              <button class="btn btn-primary toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#gatoContent" aria-expanded="false" aria-controls="gatoContent">Gato</button>
+          </div>
+        
+            <div id="perroContent" class="content-container collapse">
+                <h4 class="package-title">Perro:</h4>
+                <div class="card card-body">
+                  <ul class="package-options">
+                    <li>Vacunación Puppy <span class="price">$2,030</span></li>
+                    <li>Revacunación Anual Perro <span class="price">$780</span></li>
+                    <li class="services-subtitle">Check Up Anual: <span class="price">$2,120</span></li>
+                    <li class="check">Hemática, Perfil Químico, Urinálisis, Ultrasonido Abdominal*</li>
+                  </ul>
+                </div>
+            </div>
+        
+            <div id="gatoContent" class="content-container collapse">
+                <h4 class="package-title">Gato:</h4>
+                <ul class="package-options">
+                    <li>Vacunación Gatito + Prueba Sida/Leucemia <span class="price">$2,030</span></li>
+                    <li>Revacunación Anual Gato <span class="price">$850</span></li>
+                    <li class="services-subtitle">Check Up Anual: <span class="price">$2,120</span></li>
+                    <li class="check">Hemática, Perfil Químico, Urinálisis, Ultrasonido Abdominal*</li>
+                </ul>
+            </div>
+          </div>
+            
+        </div>
+
+
+
+      </div>
+    </section>
+    
+    <section class="contact" id="contact">
+      <div class="contact-content">
+
+        <div class="contact-info">
+          <h2>Contacto</h2>
+          <p>¿Tienes una duda o pregunta?</p>
+          <p>¡Mándanos mensaje en unas de nuestras redes sociales!</p>
+          <a href="https://www.instagram.com/svelain/" target="_blank"><i class="bx bxl-instagram"></i>svelain
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=523317654147"><i class="bx bxl-whatsapp">3317654147</i>
+          </a>
+        </div>
+
+        <div class="contact-image">
+          <img id="contactImg" alt="Contact Image">
+        </div>
+
+      </div>
+    </section>  
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img id="footerImg" alt="footer-logo" height="70">
+        </div>
+        <div class="footer-text">
+          <p>Servicios Veterinarios Eläin ® 2023 All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>

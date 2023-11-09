@@ -4,7 +4,7 @@ import images from "./assets/images/images";
 
 function App() {
   return (
-    <body>
+    <div>
       <header className="header">
         <a href="#">
           <img src={images.logo} className="logo" />
@@ -25,7 +25,7 @@ function App() {
           <h1>Servicios Veterinarios Eläin</h1>
         </div>
       </section>
-    </body>
+    </div>
   );
 }
 

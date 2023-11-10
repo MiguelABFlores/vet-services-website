@@ -1,28 +1,18 @@
-import "./App.css";
 import React from "react";
-import images from "./assets/images/images";
+import "./App.css";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div id="home">
-      <header className="header">
-        <a href="#home">
-          <img src={images.logo} className="logo" alt="SVE-logo" />
-        </a>
-
-        <nav className="navbar">
-          <a href="#home">Home</a>
-          <a href="#about">Quiénes somos</a>
-          <a href="#services">Servicios</a>
-          <a href="#contact">Contacto</a>
-        </nav>
-      </header>
-
-      <section className="home-background">
-        <div>
-          <h1>Servicios Veterinarios Eläin</h1>
-        </div>
-      </section>
+    <div className="App">
+      <Router>
+      <Navbar />
+        <Routes>
+          <Route path="/" exact Component={Home} />
+        </Routes>
+      </Router>
     </div>
   );
 }

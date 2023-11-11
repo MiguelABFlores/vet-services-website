@@ -22,7 +22,7 @@ function About() {
           </p>
         </div>
       </div>
-    </section>
+    </section>  
   );
 }
 

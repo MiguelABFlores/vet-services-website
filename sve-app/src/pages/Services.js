@@ -11,11 +11,10 @@ function Services() {
 
   return (
     <section className="services" id="services">
-      <div className="services-padding">
         <h2 className="services-title">Precios</h2>
-        <h4 className="services-subtitle">*Mas costo a domicilio por zona*</h4>
+        <h4 className="services-subtitle">*Mas costo a domicilio por zona 2023*</h4>
         <div className="services-img">
-          <img src={images.serviceImg} alt="costo distancia"/>
+          <img src={images.serviceImg} className="img" alt="costo distancia"/>
         </div>
 
         <div className="services-content">
@@ -138,7 +137,6 @@ function Services() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

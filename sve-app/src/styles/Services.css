@@ -1,18 +1,18 @@
 .services {
   background-color: #0f4172;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
 }
 
 .services-title {
   color: #d1707d;
   font-size: 55px;
-  padding: 30px 0;
 }
 
 .services-subtitle {
   font-size: 26px;
   color: #819db9;
+ margin-bottom: 30px;
 }
 
 .services-img {
@@ -22,8 +22,17 @@
   align-items: center;
 }
 
+.services-img .img{
+    border-radius: 15%;
+    transition: 0.3s;
+}
+
+.services-img .img:hover{
+    box-shadow: 0 5px 50px 0 #b3d9d4;
+}
+
 .services-content {
-  padding: 40px;
+  padding: 35px;
   display: flex;
   justify-content: space-between;
   gap: 30px;

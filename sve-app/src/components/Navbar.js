@@ -1,21 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import images from '../assets/images/images';
-import '../styles/Navbar.css';
+import images from "../assets/images/images";
+import "../styles/Navbar.css";
 
 function Navbar() {
   return (
     <div>
       <div className="header">
-        <Link to="/">
+        <a href="#home">
           <img src={images.logo} className="logo" alt="SVE-logo" />
-        </Link>
+        </a>
 
         <div className="navbar">
-          <Link to='/'>Home</Link>
-          <Link to='/about'>Quienes somos</Link>
-          <Link to='/services'>Servicios</Link>
-          <Link to='/contact'>Contactanos</Link>
+          <a href="#home" to="/">
+            Home
+          </a>
+          <a href="#about">Quienes somos</a>
+          <a href="#services">Servicios</a>
+          <a href="#contact">Contactanos</a>
         </div>
       </div>
     </div>

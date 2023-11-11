@@ -1,130 +1,137 @@
-import React from "react";
 import "../styles/Services.css";
 import images from "../assets/images/images";
+import React, { useState } from "react";
 
 function Services() {
-  
+  const [activeContent, setActiveContent] = useState('');
+
+  const handleToggle = (contentId) => {
+    setActiveContent(contentId);
+  };
+
   return (
-    <section class="services" id="services">
-      <div class="services-padding">
-        <h2 class="services-title">Precios</h2>
-        <h4 class="services-subtitle">*Mas costo a domicilio por zona*</h4>
-        <div class="services-img">
-          <img src={images.serviceImg} className="logo" alt="Servicio a distancia" />
+    <section className="services" id="services">
+      <div className="services-padding">
+        <h2 className="services-title">Precios</h2>
+        <h4 className="services-subtitle">*Mas costo a domicilio por zona*</h4>
+        <div className="services-img">
+          <img src={images.serviceImg} alt="costo distancia"/>
         </div>
 
-        <div class="services-content">
-          <div class="services-items">
-            <h3 class="service-title">Servicios</h3>
+        <div className="services-content">
+          <div className="services-items">
+            <h3 className="service-title">Servicios</h3>
             <ul>
               <li>
-                Consulta <span class="price">$480</span>
+                Consulta <span className="price">$480</span>
               </li>
               <li>
-                Ultrasonido Abdominal <span class="price">$600</span>
+                Ultrasonido Abdominal <span className="price">$600</span>
               </li>
               <li>
-                Coproparasitoscopico <span class="price">$100</span>
+                Coproparasitoscopico <span className="price">$100</span>
               </li>
               <li>
-                Biometria Hematica <span class="price">$330</span>
+                Biometria Hematica <span className="price">$330</span>
               </li>
               <li>
-                Perfil Quimico <span class="price">$1,130</span>
+                Perfil Quimico <span className="price">$1,130</span>
               </li>
               <li>
-                Examen de Orina <span class="price">$170</span>
+                Examen de Orina <span className="price">$170</span>
               </li>
             </ul>
           </div>
 
-          <div class="services-items">
-            <h3 class="service-title">Vacunas</h3>
+          <div className="services-items">
+            <h3 className="service-title">Vacunas</h3>
             <ul>
               <li>
-                Puppy y Puppy DP <span class="price">$360</span>
+                Puppy y Puppy DP <span className="price">$360</span>
               </li>
               <li>
-                Multiple <span class="price">$350</span>
+                Multiple <span className="price">$350</span>
               </li>
               <li>
-                Rabia <span class="price">$220</span>
+                Rabia <span className="price">$220</span>
               </li>
               <li>
-                Bordetella <span class="price">$250</span>
+                Bordetella <span className="price">$250</span>
               </li>
               <li>
-                Triple FSelina <span class="price">$350</span>
+                Triple FSelina <span className="price">$350</span>
               </li>
               <li>
-                Leucemia <span class="price">$350</span>
+                Leucemia <span className="price">$350</span>
               </li>
               <li>
-                Snap Sida/Leucemia <span class="price">$570</span>
+                Snap Sida/Leucemia <span className="price">$570</span>
               </li>
             </ul>
           </div>
 
-          <div class="services-items">
-            <h3 class="service-title">Paquetes</h3>
+          <div className="services-items">
+            <h3 className="service-title">Paquetes</h3>
 
-            <div class="buttons-container">
+            <div className="buttons-container">
               <button
-                class="btn btn-primary toggle-button"
+                className="btn btn-primary toggle-button"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#perroContent"
-                aria-expanded="false"
+                aria-expanded={activeContent === "perroContent"}
                 aria-controls="perroContent"
+                onClick={() => handleToggle("perroContent")}
               >
                 Perro
               </button>
               <button
-                class="btn btn-primary toggle-button"
+                className="btn btn-primary toggle-button"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#gatoContent"
-                aria-expanded="false"
+                aria-expanded={activeContent === "gatoContent"}
                 aria-controls="gatoContent"
+                onClick={() => handleToggle("gatoContent")}
               >
                 Gato
               </button>
             </div>
 
-            <div id="perroContent" class="content-container collapse">
-              <h4 class="package-title">Perro:</h4>
-              <div class="card card-body">
-                <ul class="package-options">
+            <div id="perroContent" style={{ display: activeContent === 'perroContent' ? 'block' : 'none' }}>
+              <h4 className="package-title">Perro:</h4>
+              <div className="card card-body">
+                <ul className="package-options">
                   <li>
-                    Vacunación Puppy <span class="price">$2,030</span>
+                    Vacunación Puppy <span className="price">$2,030</span>
                   </li>
                   <li>
-                    Revacunación Anual Perro <span class="price">$780</span>
+                    Revacunación Anual Perro <span className="price">$780</span>
                   </li>
-                  <li class="services-subtitle">
-                    Check Up Anual: <span class="price">$2,120</span>
+                  <li className="services-subtitle">
+                    Check Up Anual: <span className="price">$2,120</span>
                   </li>
-                  <li class="check">
+                  <li className="check">
                     Hemática, Perfil Químico, Urinálisis, Ultrasonido Abdominal*
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div id="gatoContent" class="content-container collapse">
-              <h4 class="package-title">Gato:</h4>
-              <ul class="package-options">
+            <div id="gatoContent" style={{ display: activeContent === 'gatoContent' ? 'block' : 'none' }}>
+              <h4 className="package-title">Gato:</h4>
+              <ul className="package-options">
                 <li>
                   Vacunación Gatito + Prueba Sida/Leucemia
-                  <span class="price">$2,030</span>
+                  <span className="price">$2,030</span>
                 </li>
                 <li>
-                  Revacunación Anual Gato <span class="price">$850</span>
+                  Revacunación Anual Gato <span className="price">$850</span>
                 </li>
-                <li class="services-subtitle">
-                  Check Up Anual: <span class="price">$2,120</span>
+                <li className="services-subtitle">
+                  Check Up Anual: <span className="price">$2,120</span>
                 </li>
-                <li class="check">
+                <li className="check">
                   Hemática, Perfil Químico, Urinálisis, Ultrasonido Abdominal*
                 </li>
               </ul>

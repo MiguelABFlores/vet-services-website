@@ -1,13 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-}
-
 .home {
   width: 100%;
   height: 100vh;
@@ -49,4 +39,3 @@
   object-fit: cover;
   z-index: 1;
 }
-

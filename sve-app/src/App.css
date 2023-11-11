@@ -1,4 +1,18 @@
-.App{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
   text-align: center;
   height: auto;
   width: 100%;
@@ -7,7 +21,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }

@@ -8,7 +8,7 @@ function Home() {
     video.play();
   }
   return (
-    <section className="home">
+    <section className="home" id="home">
       <div className="home-content">
         <h1>Servicios Veterinarios Eläin</h1>
         <p>

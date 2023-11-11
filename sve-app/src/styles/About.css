@@ -1,0 +1,37 @@
+.about{
+    background: #b1dce2;
+    width: 100%;
+    height: 60vh;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.about-content{
+    padding-top: 7%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1px;
+    overflow-x: hidden;
+
+}
+
+.about-content h2{
+    color: #d1707d;
+    font-size: 55px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.about-content p{
+    font-size: 25px;
+    color: #0f4172;
+    font-weight: 600;
+    margin: 20px 0 40px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.about-img img{
+    position: relative;
+    border-radius: 15%;
+}

@@ -1,8 +1,5 @@
 import React from "react";
 import "./App.css";
-import ReactDOM from "react-dom";
-import { Nav, NavLink } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/fontawesome-free";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";

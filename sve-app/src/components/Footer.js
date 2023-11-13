@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 function Footer() {
   return (
   <section className="footer">
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
       <div class="col-md-4 d-flex align-items-center footer-container">
         <a
           href="/"

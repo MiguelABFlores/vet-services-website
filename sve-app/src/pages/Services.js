@@ -99,7 +99,6 @@ function Services() {
 
             <div id="perroContent" style={{ display: activeContent === 'perroContent' ? 'block' : 'none' }}>
               <h4 className="package-title">Perro:</h4>
-              <div className="card card-body">
                 <ul className="package-options">
                   <li>
                     Vacunación Puppy <span className="price">$2,030</span>
@@ -114,7 +113,6 @@ function Services() {
                     Hemática, Perfil Químico, Urinálisis, Ultrasonido Abdominal*
                   </li>
                 </ul>
-              </div>
             </div>
 
             <div id="gatoContent" style={{ display: activeContent === 'gatoContent' ? 'block' : 'none' }}>

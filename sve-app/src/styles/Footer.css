@@ -1,0 +1,25 @@
+.footer {
+  background: #0f4172;
+  box-shadow: 0 2px 15px 0 black;
+}
+
+.footer-span{
+    padding-left: 20%;
+    color: #ecffff;
+    font-size: 1.1rem;
+}
+
+.box-icons{
+    gap: 100px;
+}
+
+.icons-padding {
+  padding-right: 15%;
+  gap: 25px;
+}
+
+.icons{
+    color: #ecffff;
+    font-size: 100px;
+}
+

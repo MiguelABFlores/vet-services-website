@@ -1,9 +1,13 @@
 import React from "react";
 import "./App.css";
+import ReactDOM from "react-dom";
+import { Nav, NavLink } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/fontawesome-free";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Doctors from "./pages/Doctors";
+// import Doctors from "./pages/Doctors";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
@@ -14,7 +18,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Doctors />
+      {/* <Doctors /> */}
       <Services />
       <Contact />
       <Footer />

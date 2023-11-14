@@ -1,10 +1,10 @@
-# Servicios Veterinarios Eläin
+# Getting Started with Create React App
 
-## URL of development Version
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-> ⚙️ [Development](https://svelain-cloudrun-dev-y7olqgb2fa-wl.a.run.app)
+## Available Scripts
 
-> 🏎️ [Release](https://svelain-cloudrun-release-y7olqgb2fa-wl.a.run.app)
+In the project directory, you can run:
 
 ### `npm start`
 
@@ -38,17 +38,6 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Format and Validate
-
-We will be using different tools to format the code and verify its validity accross the lines:
-
-- [HTML Validator](https://validator.w3.org/)
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-## Label Groups
-
-![image](https://github.com/MiguelABFlores/vet-services-website/assets/132161759/27a81a31-33bc-4c55-af80-09c7cbc27b38)
 
 ## Learn More
 

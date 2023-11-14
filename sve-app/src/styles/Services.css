@@ -1,0 +1,154 @@
+.services {
+  background-color: #0f4172;
+  padding: 25px;
+  text-align: center;
+}
+
+.services-title {
+  color: #d1707d;
+  font-size: 55px;
+}
+
+.services-subtitle {
+  font-size: 26px;
+  color: #819db9;
+  margin-bottom: 30px;
+}
+
+.services-img {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-img .img {
+  border-radius: 15%;
+  transition: 0.3s;
+}
+
+.services-img .img:hover {
+  box-shadow: 0 5px 50px 0 #b3d9d4;
+}
+
+.services-content {
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Styles for each service box */
+.services-items {
+  flex: 1;
+  background-color: #0f4172;
+  border: 2px solid #b3d9d4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+  padding-top: 40px;
+}
+
+.services-items:hover {
+  box-shadow: 0 8px 100px 0 #d1707d;
+}
+
+.service-title {
+  color: #d1707d;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+.services-content ul{
+  padding-left: 0;
+}
+
+.services-items li {
+  list-style: none;
+  font-size: 35px;
+  margin: 5px 10px;
+  color: #b3d9d4;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+/*-----packages-----*/
+
+.price {
+  margin-left: 10px;
+  color: #d1707d;
+  text-align: left;
+  width: 80px;
+}
+
+/* Estilos para los botones */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: #0f4172;
+  border: 2px solid #b3d9d4;
+  font-size: 40px;
+  color: #b3d9d4;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background: #d1707d;
+  transition: 0.4s;
+}
+
+.toggle-button {
+  margin: 10px;
+}
+
+.package-title {
+  color: #d1707d;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+/* Estilos para el contenido perro y gato */
+#perroContent {
+  display: none;
+  transition: 0.4s;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+#gatoContent {
+  display: none;
+  transition: 0.4s;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.package-options .price {
+  color: #d1707d;
+  margin-left: 10px;
+}
+
+.package-options .check {
+  color: #819db9;
+}
+
+.package-options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-options li {
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}

@@ -3,8 +3,8 @@ name: Build and Deploy to Cloud Run Release
 on:
   push:
     branches: ["release"]
-    paths-ignore:
-      - "**.md"
+    # paths-ignore:
+    #   - "**.md"
 
 env:
   PROJECT_ID: servicios-veterinarios-elain

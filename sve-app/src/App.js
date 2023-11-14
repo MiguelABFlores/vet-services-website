@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
+import Backtotop from "./components/Backtotop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 // import Doctors from "./pages/Doctors";
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Backtotop />
       <Home />
       <About />
       {/* <Doctors /> */}

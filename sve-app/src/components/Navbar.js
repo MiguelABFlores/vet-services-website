@@ -10,14 +10,14 @@ function Navbar() {
           <img src={images.logo} className="logo" alt="SVE-logo" />
         </a>
 
-        <div className="navbar">
+        <nav className="navbar">
           <a href="#home" to="/">
             Home
           </a>
           <a href="#about">Quienes somos</a>
           <a href="#services">Servicios</a>
           <a href="#contact">Contactanos</a>
-        </div>
+        </nav>
       </div>
     </div>
   );

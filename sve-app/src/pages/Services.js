@@ -12,7 +12,7 @@ function Services() {
   return (
     <section className="services" id="services">
         <h2 className="services-title">Precios</h2>
-        <h4 className="services-subtitle">*Mas costo a domicilio por zona 2023*</h4>
+        <h4 className="services-subtitle">* Más costo a domicilio por zona 2023 *</h4>
         <div className="services-img">
           <img src={images.serviceImg} className="img" alt="costo distancia"/>
         </div>
@@ -31,10 +31,10 @@ function Services() {
                 Coproparasitoscopico <span className="price">$100</span>
               </li>
               <li>
-                Biometria Hematica <span className="price">$330</span>
+                Biometría Hemática <span className="price">$330</span>
               </li>
               <li>
-                Perfil Quimico <span className="price">$1,130</span>
+                Perfil Químico <span className="price">$1,130</span>
               </li>
               <li>
                 Examen de Orina <span className="price">$170</span>
@@ -49,7 +49,7 @@ function Services() {
                 Puppy y Puppy DP <span className="price">$360</span>
               </li>
               <li>
-                Multiple <span className="price">$350</span>
+                Múltiple <span className="price">$350</span>
               </li>
               <li>
                 Rabia <span className="price">$220</span>

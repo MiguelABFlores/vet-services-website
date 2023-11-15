@@ -11,7 +11,7 @@ function About() {
         </div>
 
         <div className="about-text">
-          <h2 className="title-about">Sobre nosotros</h2>
+          <h2 className="title-about">Sobre Nosotros</h2>
           <p>
             En Servicios Veterinarios Eläin entendemos que la comidad de tus
             mascotas es una prioridad. Por eso, Ofrecemos servicios veterinarios

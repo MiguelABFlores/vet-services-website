@@ -13,7 +13,7 @@ function About() {
         <div className="about-text">
           <h2 className="title-about">Sobre Nosotros</h2>
           <p>
-            En Servicios Veterinarios Eläin entendemos que la comidad de tus
+            En Servicios Veterinarios Eläin entendemos que la comodidad de tus
             mascotas es una prioridad. Por eso, Ofrecemos servicios veterinarios
             a domiciolio bajo cita previa.
           </p>

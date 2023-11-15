@@ -25,13 +25,13 @@ function Navbar() {
           Home
         </a>
         <a href="#about" onClick={closeMenu}>
-          Quienes somos
+          Quiénes Somos
         </a>
         <a href="#services" onClick={closeMenu}>
           Servicios
         </a>
         <a href="#contact" onClick={closeMenu}>
-          Contactanos
+          Contáctanos
         </a>
 
         <div className="mobile" onClick={toggleMenu}>

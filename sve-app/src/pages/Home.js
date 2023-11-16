@@ -19,7 +19,7 @@ function Home() {
       </div>
 
       <div className="home-video">
-        <video src={video.video} autoPlay muted loop onEnded={handleEnded}/>
+        <video className="video" src={video.video} autoPlay muted loop onEnded={handleEnded}/>
       </div>
     </section>
   );

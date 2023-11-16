@@ -43,7 +43,7 @@
 @media screen and (max-width: 480px) {
   .home {
     width: 100%;
-    height: 130vh;
+    height: auto;
     align-items: center;
     grid-template-columns: 1fr;
     padding: 0 5%;
@@ -81,7 +81,7 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .home {
     width: 100%;
-    height: 130vh;
+    height: auto;
     align-items: center;
     grid-template-columns: 1fr;
     padding: 0 5%;
@@ -119,7 +119,7 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .home {
     width: 100%;
-    height: 130vh;
+    height: auto;
     align-items: center;
     grid-template-columns: 1fr;
     padding: 0 5%;

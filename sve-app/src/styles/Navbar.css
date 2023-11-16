@@ -59,10 +59,12 @@
   .navbar {
     display: block;
     margin-right: 60px;
+    color: #b1dce2;
   }
 
   .navbar a {
     display: none;
+    width: 100%;
     font-size: 18px;
   }
 
@@ -71,24 +73,32 @@
   }
 
   .navbar.open {
+    box-shadow: 0 2px 4px 0 black;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    width: 100%;
+    top: 0;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #0f4172;
     padding: 1rem;
+    transition: 0.5s;
   }
 
   .navbar.open a {
+    width: 100%;
+    display: block;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 25px;
+    border-bottom: 1px solid #b1dce2;
   }
 
   .mobile {
+    transition: 0.5s;
+    position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 35px;
     cursor: pointer;
   }
 }
@@ -97,33 +107,47 @@
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .navbar {
     display: block;
-    margin-right: 100px;
+    margin-right: 60px;
+    color: #b1dce2;
   }
 
   .navbar a {
     display: none;
+    width: 100%;
     font-size: 18px;
   }
 
+  .logo {
+    margin-left: 50px;
+  }
+
   .navbar.open {
+    box-shadow: 0 2px 4px 0 black;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    width: 100%;
+    top: 0;
     left: 0;
     right: 0;
-    background-color: #333;
+    background-color: #0f4172;
     padding: 1rem;
+    transition: 0.5s;
   }
 
   .navbar.open a {
+    width: 100%;
+    display: block;
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 30px;
+    border-bottom: 1px solid #b1dce2;
   }
 
   .mobile {
+    transition: 0.5s;
+    position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 35px;
     cursor: pointer;
   }
 }
@@ -132,73 +156,96 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .navbar {
     display: block;
-    margin-right: 100px;
-  }
-
-  .header a {
-    font-size: 20px;
-  }
-
-  .logo {
-    width: 120px;
-  }
-
-  .navbar.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 1rem;
+    margin-right: 70px;
+    color: #b1dce2;
   }
 
   .navbar a {
     display: none;
+    width: 100%;
     font-size: 18px;
   }
 
-  .mobile {
+  .logo {
+    margin-left: 120px;
+  }
+
+  .navbar.open {
+    box-shadow: 0 2px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0f4172;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+
+  .navbar.open a {
+    width: 100%;
     display: block;
-    font-size: 20px;
+    margin: 10px 0;
+    font-size: 35px;
+    border-bottom: 1px solid #b1dce2;
+  }
+
+  .mobile {
+    transition: 0.5s;
+    position: relative;
+    display: block;
+    font-size: 40px;
     cursor: pointer;
   }
 }
 
 /* Estilos para escritorios */
-@media screen and (min-width: 1025px) and (max-width: 1307px) {
-  .header a {
-    font-size: 22px;
-  }
-
+@media screen and (min-width: 1025px) and (max-width: 1308px) {
   .navbar {
-    margin-right: 130px;
-  }
-
-  .navbar.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 1rem;
-  }
-
-  .logo {
-    width: 130px;
+    display: block;
+    margin-right: 70px;
+    color: #b1dce2;
   }
 
   .navbar a {
     display: none;
-    font-size: 20px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .logo {
+    margin-left: 120px;
+  }
+
+  .navbar.open {
+    box-shadow: 0 2px 4px 0 black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0f4172;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+
+  .navbar.open a {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    font-size: 40px;
+    border-bottom: 1px solid #b1dce2;
   }
 
   .mobile {
+    transition: 0.5s;
+    position: relative;
     display: block;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
   }
 }

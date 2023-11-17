@@ -1,54 +1,125 @@
 .contact {
-    background-color: #b3d9d4; 
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 60vh;
+  background-color: #b3d9d4;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 55vh;
 }
 
 .contact-content {
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact-info {
-    flex: 1;
-    text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .contact-info h2 {
-    padding-bottom: 20px;
-    font-size: 55px;
-    color: #d1707d;
+  padding-bottom: 20px;
+  font-size: 65px;
+  color: #d1707d;
 }
 
 .contact-info p {
-    padding-bottom: 20px;
-    font-size: 38px;
-    color: #0f4172;
+  padding-bottom: 20px;
+  font-size: 40px;
+  color: #0f4172;
 }
 
 .contact-info a {
-    justify-content: center;
-    align-items:center;
-    width: 80px;
-    height: 80px;
-    background: transparent;
-    text-decoration: none;
-    font-size: 50px;
-    color:#0f4172;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: transparent;
+  text-decoration: none;
+  font-size: 50px;
+  color: #0f4172;
 }
 
 .contact-image {
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
 }
 
 .contact-image img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
 
+@media (max-width: 480px) {
+  .contact-content {
+    display: grid;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .contact-content {
+    display: grid;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .contact-content {
+    display: grid;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-info h2 {
+    font-size: 75px;
+  }
+
+  .contact-info p {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1369px) {
+  .contact-content {
+    display: grid;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-image {
+    display: none;
+  }
+
+  .contact-info h2 {
+    font-size: 75px;
+  }
+
+  .contact-info p {
+    font-size: 58px;
+  }
 }

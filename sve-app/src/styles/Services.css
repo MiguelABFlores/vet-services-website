@@ -327,3 +327,45 @@
     margin-right: 11%;
   }
 }
+
+@media screen and (min-width: 1370px) and (max-width: 1669px) {
+  .services {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-img .img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-content {
+    width: 100%;
+    display: flex;
+    padding: 0 120px;
+    justify-content: center;
+    flex-direction: flex;
+  }
+
+  .services-items li {
+    list-style: none;
+    font-size: 32px;
+    padding: 3px 20px;
+  }
+  #perroContent {
+    display: none;
+    transition: 0.4s;
+    margin-left: 8%;
+    margin-right: 11%;
+  }
+
+  #gatoContent {
+    display: none;
+    transition: 0.4s;
+    margin-left: 8%;
+    margin-right: 11%;
+  }
+}

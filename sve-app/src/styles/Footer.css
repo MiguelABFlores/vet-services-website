@@ -29,11 +29,11 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  color: white;
+  color: #b1dce2;
 }
 
 a {
-  color: rgb(175, 175, 179);
+  color: #b1dce2;
   text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ a {
   font-size: 20px;
   line-height: 15px;
   margin-left: 2rem;
-  color: white;
+  color: #b1dce2;
   font-weight: 600;
 }
 
@@ -96,7 +96,7 @@ hr {
 .sb__footer-copyright {
   font-size: 20px;
   line-height: 15px;
-  color: rgb(255, 255, 255);
+  color: #b1dce2;
   font-weight: 600;
 }
 

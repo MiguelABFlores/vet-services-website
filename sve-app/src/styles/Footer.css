@@ -113,8 +113,12 @@ hr {
   }
 
   .sb__footer-links-div p {
-    font-size: 22px;
+    font-size: 25px;
     padding-bottom: 0.7rem;
+  }
+
+  .sb__footer-links-div p:hover{
+    color: #d1707d;
   }
 
   .sb__footer-links-div h4 {
@@ -166,6 +170,10 @@ hr {
     padding-bottom: 0.9rem;
   }
 
+  .sb__footer-links-div p:hover{
+    color: #d1707d;
+  }
+
   .sb__footer-links-div h4 {
     font-size: 35px;
   }
@@ -213,6 +221,10 @@ hr {
     padding-top: 0.7rem;
     font-size: 25px;
     padding-bottom: 0.9rem;
+  }
+
+  .sb__footer-links-div p:hover{
+    color: #d1707d;
   }
 
   .sb__footer-links-div h4 {

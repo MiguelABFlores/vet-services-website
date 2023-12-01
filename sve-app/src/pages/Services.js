@@ -11,7 +11,7 @@ function Services() {
 
   return (
     <section className="services" id="services">
-        <h2 className="services-title">Precios</h2>
+        <h2 className="services-title">Servicios</h2>
         <h4 className="services-subtitle">* Más costo a domicilio por zona 2023 *</h4>
         <div className="services-img">
           <img src={images.serviceImg} className="img" alt="costo distancia"/>

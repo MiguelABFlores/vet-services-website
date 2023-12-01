@@ -34,12 +34,14 @@ function Footer() {
               <a
                 href="https://www.instagram.com/svelain/"
                 rel="noopener noreferrer"
+                target="_blank"
               >
                 <FaInstagram style={{ color: "#b1dce2" }} />
               </a>
               <a
                 href="https://wa.me/5213317654147"
                 rel="noopener noreferrer"
+                target="_blank"
                 className="icons"
               >
                 <FaWhatsapp style={{ color: "#b1dce2" }} />

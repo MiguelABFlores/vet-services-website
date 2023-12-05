@@ -8,6 +8,7 @@
   grid-gap: 50px;
   overflow-x: hidden;
   background: #0f4172;
+  z-index: -1;
 }
 
 .home-content h1 {

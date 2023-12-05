@@ -1,33 +1,38 @@
+/* Sidebuttons.css */
+
 .side-buttons {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1;
-    font-size: 20px;
-  }
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+  font-size: 20px;
+}
 
-  .sidebuttons{
-    background: #0f4172;
-    padding: 10px 0;
-    border: 3px solid #d1707d;
-    border-radius: 20%;
-    color: #b1dce2;
-    transition: 0.3s;
-  }
+.sidebuttons {
+  background: #0f4172;
+  padding: 10px 0;
+  border: 3px solid #d1707d;
+  border-radius: 20%;
+  color: #b1dce2;
+  transition: 0.3s;
+}
 
-  .sidebuttons:hover{
-    box-shadow: 0 1px 25px 0 #d1707d;
-  }
-  
-  .side-buttons.show {
-    opacity: 1;
-    visibility: visible;
-  }
-  
+.sidebuttons.menu-icon.hide {
+  background: #0f4172;
+}
+
+.sidebuttons:hover {
+  box-shadow: 0 1px 25px 0 #d1707d;
+}
+
+.side-buttons.show {
+  opacity: 1;
+  visibility: visible;
+}

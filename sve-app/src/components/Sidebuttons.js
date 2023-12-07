@@ -2,16 +2,17 @@
 
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCross, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Sidebuttons.css";
 
 function Sidebuttons() {
-  const [showButtons, setShowButtons] = useState(false);
+  const [showButtons, setShowButtons] = useState(true);
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setShowButtons(true);
-      resetHideTimer();
+      scrollToSection();
+      resetHideTimer(false);
     } else {
       setShowButtons(false);
     }
@@ -27,6 +28,10 @@ function Sidebuttons() {
     };
   }, []);
 
+  const toggleButtons = () => {
+    setShowButtons(!showButtons);
+  };
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
 
@@ -35,10 +40,9 @@ function Sidebuttons() {
         top: section.offsetTop,
         behavior: "smooth",
       });
+      // Oculta los botones después de hacer clic en una sección
+      setShowButtons(false);
     }
-
-    // Oculta los botones después de hacer clic en una sección
-    hideButtonsAfterTimeout();
   };
 
   let hideTimer;
@@ -46,7 +50,7 @@ function Sidebuttons() {
   const hideButtonsAfterTimeout = () => {
     hideTimer = setTimeout(() => {
       setShowButtons(false);
-    }, 2000); // 3000 milisegundos = 3 segundos (ajusta según sea necesario)
+    }, 1500); 
   };
 
   const resetHideTimer = () => {
@@ -56,37 +60,49 @@ function Sidebuttons() {
 
   return (
     <div className={`side-buttons ${showButtons ? "show" : ""}`}>
-      <button
-        className={`sidebuttons menu-icon ${showButtons ? "hide" : ""}`}
-        onClick={() => setShowButtons(!showButtons)}
-      >
-        {showButtons ? <FontAwesomeIcon icon={faTimes} /> : "☰"}
-      </button>
       {showButtons && (
         <>
           <button
             className="sidebuttons"
-            onClick={() => scrollToSection("home")}
+            onClick={() => {
+              scrollToSection("home");
+
+            }}
           >
             Home
           </button>
           <button
             className="sidebuttons"
-            onClick={() => scrollToSection("about")}
+            onClick={() => {
+              scrollToSection("about");
+
+            }}
           >
             About
           </button>
           <button
             className="sidebuttons"
-            onClick={() => scrollToSection("services")}
+            onClick={() => {
+              scrollToSection("services");
+
+            }}
           >
             Services
           </button>
           <button
             className="sidebuttons"
-            onClick={() => scrollToSection("contact")}
+            onClick={() => {
+              scrollToSection("contact");
+
+            }}
           >
             Contact
+          </button>
+          <button
+            className={`icon menu-icon`}
+            onClick={() => toggleButtons()}
+          >
+            {showButtons ? <FontAwesomeIcon icon={faTimes} /> : "☰"}
           </button>
         </>
       )}

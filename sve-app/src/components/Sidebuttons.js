@@ -1,35 +1,34 @@
-// Sidebuttons.jsx
-
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/Sidebuttons.css";
 
 function Sidebuttons() {
-  const [showButtons, setShowButtons] = useState(true);
-
-  const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setShowButtons(true);
-      scrollToSection();
-      resetHideTimer(false);
-    } else {
-      setShowButtons(false);
-    }
-  };
+  const [showButtons, setShowButtons] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowButtons(true);
+      } else {
+        setShowButtons(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
 
     // Limpiar el event listener cuando el componente se desmonta
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(hideTimer);
     };
   }, []);
 
-  const toggleButtons = () => {
-    setShowButtons(!showButtons);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   const scrollToSection = (sectionId) => {
@@ -40,72 +39,31 @@ function Sidebuttons() {
         top: section.offsetTop,
         behavior: "smooth",
       });
-      // Oculta los botones después de hacer clic en una sección
-      setShowButtons(false);
+
+      // Oculta el menú después de hacer clic en una sección
+      closeMenu();
     }
   };
 
-  let hideTimer;
-
-  const hideButtonsAfterTimeout = () => {
-    hideTimer = setTimeout(() => {
-      setShowButtons(false);
-    }, 1500); 
-  };
-
-  const resetHideTimer = () => {
-    clearTimeout(hideTimer);
-    hideButtonsAfterTimeout();
-  };
-
   return (
-    <div className={`side-buttons ${showButtons ? "show" : ""}`}>
-      {showButtons && (
-        <>
-          <button
-            className="sidebuttons"
-            onClick={() => {
-              scrollToSection("home");
-
-            }}
-          >
-            Home
-          </button>
-          <button
-            className="sidebuttons"
-            onClick={() => {
-              scrollToSection("about");
-
-            }}
-          >
-            About
-          </button>
-          <button
-            className="sidebuttons"
-            onClick={() => {
-              scrollToSection("services");
-
-            }}
-          >
-            Services
-          </button>
-          <button
-            className="sidebuttons"
-            onClick={() => {
-              scrollToSection("contact");
-
-            }}
-          >
-            Contact
-          </button>
-          <button
-            className={`icon menu-icon`}
-            onClick={() => toggleButtons()}
-          >
-            {showButtons ? <FontAwesomeIcon icon={faTimes} /> : "☰"}
-          </button>
-        </>
-      )}
+    <div className={`container ${showButtons ? "show" : ""}`}>
+      <div className={`sidebuttons ${isMenuOpen ? "show" : ""}`}>
+        <a href="#home" className="sections" onClick={() => scrollToSection("home")}>
+          Home
+        </a>
+        <a href="#about" className="sections" onClick={() => scrollToSection("about")}>
+          About
+        </a>
+        <a href="#services" className="sections" onClick={() => scrollToSection("services")}>
+          Servicios
+        </a>
+        <a href="#contact" className="sections" onClick={() => scrollToSection("contact")}>
+          Contacto
+        </a>
+      </div>
+      <div className="icon" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
     </div>
   );
 }

@@ -54,3 +54,8 @@
   box-shadow: 0 1px 25px 0 #d1707d;
 }
 
+@media screen and (max-width: 1669px){
+  .container{
+    display: none;
+  }
+}

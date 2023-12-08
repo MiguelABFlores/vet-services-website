@@ -17,7 +17,7 @@ function Sidebuttons() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Limpiar el event listener cuando el componente se desmonta
+    // Limpia el event listener cuando el componente se desmonta
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -47,23 +47,27 @@ function Sidebuttons() {
 
   return (
     <div className={`container ${showButtons ? "show" : ""}`}>
-      <div className={`sidebuttons ${isMenuOpen ? "show" : ""}`}>
-        <a href="#home" className="sections" onClick={() => scrollToSection("home")}>
-          Home
-        </a>
-        <a href="#about" className="sections" onClick={() => scrollToSection("about")}>
-          About
-        </a>
-        <a href="#services" className="sections" onClick={() => scrollToSection("services")}>
-          Servicios
-        </a>
-        <a href="#contact" className="sections" onClick={() => scrollToSection("contact")}>
-          Contacto
-        </a>
-      </div>
-      <div className="icon" onClick={toggleMenu}>
-        {isMenuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+      {showButtons && (
+        <>
+          <div className={`sidebuttons ${isMenuOpen ? "show" : ""}`}>
+            <a href="#home" className="sections" onClick={() => scrollToSection("home")}>
+              Home
+            </a>
+            <a href="#about" className="sections" onClick={() => scrollToSection("about")}>
+              About
+            </a>
+            <a href="#services" className="sections" onClick={() => scrollToSection("services")}>
+              Servicios
+            </a>
+            <a href="#contact" className="sections" onClick={() => scrollToSection("contact")}>
+              Contacto
+            </a>
+          </div>
+          <div className="icon" onClick={toggleMenu}>
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </div>
+        </>
+      )}
     </div>
   );
 }

@@ -4,7 +4,7 @@
     border: 3px solid #d1707d;
     border-radius: 15%;
     color: #b1dce2;
-    transition: 0.3s;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     padding-bottom: 55px;
     padding-left: 10px;
     padding-right: 10px;
